@@ -43,9 +43,9 @@ var jsonTests = [
 ];
 
 jsonTests.forEach(function(testJson){
-    var req = http.request(testOptions, function(res) {
-        console.log(res.statusCode);
-        });
+    var req = http.request(testOptions, function() {
+      // This is intentional
+    });
     req.write(testJson);
     req.end();
 });
